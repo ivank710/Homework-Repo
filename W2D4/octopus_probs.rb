@@ -1,3 +1,4 @@
+#quadratic
 def sluggish_octopus(fish_lengths)
   max = ""
 
@@ -52,13 +53,14 @@ class Array
   end
 end
 
-
+#n log n
 def dominant_octopus(fishes)
   prc = Proc.new { |x, y| y.length <=> x.length }
 
   fishes.merge_sort(&prc).first
 end
 
+#linear
 def clever_octopus(fishes)
   biggest = fishes.first
 
@@ -71,7 +73,7 @@ end
 
 tiles_array = ["up", "right-up", "right", "right-down", "down", "left-down", "left",  "left-up" ]
 
-
+#linear
 def slow_dance(direction, tiles_array)
   tiles_array.each_with_index do |tile, index|
     return index if tile == direction
@@ -89,6 +91,7 @@ tiles_hash = {
     "left-up" => 7
 }
 
+# constant 
 def fast_dance(direction, tiles_hash)
   tiles_hash[direction]
 end
